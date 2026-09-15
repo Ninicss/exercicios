@@ -5,13 +5,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite seu salário: ");
-        double salario = entrada.nextDouble();
 
-        if (salario <= 4000) {
-            System.out.println("Você possui direito ao VR.");
+        System.out.print("Digite o tempo de contratação (meses): ");
+        double tempo = entrada.nextDouble();
+
+
+        if (tempo >= 3) {
+            System.out.println("O plano de saúde  está disponível para você.");
         } else {
-            System.out.println("Você não possui direito ao VR.");
+            System.out.println("Serviço não disponível para você.");
         }
     }
 }
