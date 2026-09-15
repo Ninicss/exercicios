@@ -4,16 +4,8 @@ package org.example;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("Digite o nome do participante " + i + ":");
-            String nome = entrada.nextLine();
-
-            System.out.println("Entrada registrada com sucesso: " + nome + " (Participante " + i + "/10)");
+        for (int peca = 1; peca <= 20; peca++) {
+            System.out.println("Peça Produzida");
         }
-
-        System.out.println("Todos os 10 participantes foram registrados!");
-        entrada.close();
     }
 }
