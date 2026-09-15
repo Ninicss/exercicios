@@ -5,14 +5,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        double nota;
-        System.out.println("Digite sua nota:");
-        nota = entrada.nextDouble();
+        double n1, n2;
+        System.out.println("Digite o primeiro número: ");
+        n1 = entrada.nextDouble();
+        System.out.println("Digite o segundo número: ");
+        n2 = entrada.nextDouble();
 
-        if (nota >=7 ){
-            System.out.println("Aprovado!");
+        if (n1 > n2 ){
+            System.out.println(n1);
         } else {
-            System.out.println("Reprovado!");
+            System.out.println(n2);
         }
     }
 }
