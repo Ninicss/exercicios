@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite o peso em kg:");
-        double peso = entrada.nextDouble();
-        System.out.println("Digite a altura em metros:");
-        double altura = entrada.nextDouble();
-        double imc = peso / (altura * altura);
-        System.out.println("Índice de Massa Corporal (IMC):\n" + imc);
+        System.out.println("Digite a distância percorrida em km:");
+        double dist = entrada.nextDouble();
+        System.out.println("Digite o total de combustível gasto em litros:");
+        double litros = entrada.nextDouble();
+        double consumo = dist / litros;
+        System.out.println("Consumo médio:\n" + consumo + " km/l");
     }
 }
