@@ -5,16 +5,23 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int nota, qtdCliente = 1;
+        double valor, soma;
+        String continuar;
 
-        while (qtdCliente < 10) {
-            System.out.println("Cliente " + qtdCliente + " informe sua nota: ");
-            nota = entrada.nextInt();
-            qtdCliente++;
-        }
+        soma = 0;
+        do {
+            System.out.println("Informe o valor do produto: ");
+            valor = entrada.nextDouble();
+            soma = soma + valor;
+            System.out.println("Continuar? (y)");
 
-        System.out.println("Quantidade de clientes participantes: " + qtdCliente);
+            entrada.nextLine(); // limpa o buffer
+            continuar = entrada.nextLine();
+        } while (continuar.equals("y") || continuar.equals("Y"));
 
+        System.out.println("Total da compra: " + soma );
 
     }
+
+
 }
