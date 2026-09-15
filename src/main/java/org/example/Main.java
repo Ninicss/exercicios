@@ -1,11 +1,14 @@
-package org.example;public class Main {
+package org.example;
+public class Main {
     public static void main(String[] args) {
-        float varF = 2.7f;
-        long varL = (long) varF; //casting explícito
-        double varD = varL; //casting implícito
-        System.out.println("Valor float " + varF);
-        System.out.println("Valor long: " + varL);
-        System.out.println("Valor double: " + varD);
+        short valorShort = 32;
+        int valorInt = valorShort;
+        byte valorByte = (byte) valorShort;
+
+        System.out.println("Valor short: " + valorShort);
+        System.out.println("Valor int: " + valorInt);
+        System.out.println("Valor byte: " + valorByte);
+
 
 
     }
