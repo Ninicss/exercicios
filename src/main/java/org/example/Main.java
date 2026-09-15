@@ -1,20 +1,18 @@
 package org.example;
 
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
-        boolean A = true;
-        boolean B = false;
-        boolean cond1, cond2, cond3;
-
-        cond1 = A && B;
-        cond2 = A || B;
-        cond3 = !A;
-
-        System.out.println("A E B: " + cond1);
-        System.out.println("A OU B: " + cond2);
-        System.out.println("Inverso de A: " + cond3);
-
-
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Digite a primeira nota: (10 a 0)");
+        double nota1= sc.nextDouble ();
+        System.out.println("Digite a segunda nota: (10 a 0)");
+        double nota2= sc.nextDouble ();
+        System.out.println("Digite a terceira nota: (10 a 0)");
+        double nota3= sc.nextDouble ();
+        double media = (nota1 + nota2 + nota3)/ 3;
+        System.out.println ("média:\n" + media);
     }
 }
