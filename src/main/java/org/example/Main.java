@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o saldo médio mensal do cliente (R$):");
+        double saldo = entrada.nextDouble();
 
-        System.out.println("Digite o valor da transação (R$):");
-        double valorTransacao = entrada.nextDouble();
-
-        if (valorTransacao > 10000) {
-            System.out.println("Alerta: Transação suspeita! Sinalizada para análise.");
+        if (saldo > 5000) {
+            System.out.println("Direito à isenção de tarifa bancária concedido.");
         } else {
-            System.out.println("Transação normal aprovada.");
+            System.out.println("Tarifa bancária mantida. É necessário saldo superior a R$ 5.000 para isenção.");
         }
     }
 }
