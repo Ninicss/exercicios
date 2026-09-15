@@ -5,17 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite o valor de A:");
-        int a = entrada.nextInt();
-        System.out.println("Digite o valor de B:");
-        int b = entrada.nextInt();
-
-        System.out.println("Valores antes da troca:\nA: " + a + "\nB: " + b);
-
-        int aux = a;
-        a = b;
-        b = aux;
-
-        System.out.println("Valores depois da troca:\nA: " + a + "\nB: " + b);
+        System.out.println("Digite o peso em kg:");
+        double peso = entrada.nextDouble();
+        System.out.println("Digite a altura em metros:");
+        double altura = entrada.nextDouble();
+        double imc = peso / (altura * altura);
+        System.out.println("Índice de Massa Corporal (IMC):\n" + imc);
     }
 }
