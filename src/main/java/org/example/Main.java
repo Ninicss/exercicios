@@ -1,10 +1,11 @@
-package org.example;
-public class Main {
+package org.example;public class Main {
     public static void main(String[] args) {
-        double valorDouble = 33.7;
-        int valorInt = (int) valorDouble; //casting explícito
-        System.out.println("Valor Double: " + valorDouble);
-        System.out.println("Valor inteiro: " + valorInt);
+        float varF = 2.7f;
+        long varL = (long) varF; //casting explícito
+        double varD = varL; //casting implícito
+        System.out.println("Valor float " + varF);
+        System.out.println("Valor long: " + varL);
+        System.out.println("Valor double: " + varD);
 
 
     }
