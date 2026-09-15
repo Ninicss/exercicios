@@ -5,11 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite o valor da hora trabalhada:");
-        double valorHora = entrada.nextDouble();
-        System.out.println("Digite o número de horas trabalhadas no mês:");
-        double horas = entrada.nextDouble();
-        double salario = valorHora * horas;
-        System.out.println("Salário bruto mensal:\n" + "R$ " + salario);
+        System.out.println("Digite o valor do raio do círculo:");
+        double raio = entrada.nextDouble();
+        double area = Math.PI * (raio * raio);
+        System.out.println("Área do círculo:\n" + area);
     }
 }
