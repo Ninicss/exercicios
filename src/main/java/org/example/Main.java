@@ -1,27 +1,29 @@
-package org.example;
-
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
+
+//Leitura de Arquivos Classes Buffers
+//Desafio 1 - Exibir apenas Hosts
 public class Main {
-    public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        double valor, soma;
-        String continuar;
+    public static void main(String[] args) throws IOException {
+        String arquivo = "C:/Users/49282936813/Downloads/ativos.csv";
 
-        soma = 0;
-        do {
-            System.out.println("Informe o valor do produto: ");
-            valor = entrada.nextDouble();
-            soma = soma + valor;
-            System.out.println("Continuar? (y)");
+        BufferedReader leitor = new BufferedReader(new FileReader(arquivo));
 
-            entrada.nextLine(); // limpa o buffer
-            continuar = entrada.nextLine();
-        } while (continuar.equals("y") || continuar.equals("Y"));
+        String linha;
+        while (true){
+            try {
+                if (!((linha = leitor.readLine()) != null)) break;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            String[] dado = linha.split(",");
+            String hosts = dado[0];
 
-        System.out.println("Total da compra: " + soma );
+            System.out.println("Host: "+ hosts);
+
+        }
 
     }
-
-
 }
